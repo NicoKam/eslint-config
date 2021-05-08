@@ -1,0 +1,48 @@
+{
+  "name": "@orca-fe/eslint-config",
+  "version": "1.0.0",
+  "files": [
+    "rules",
+    "index.js"
+  ],
+  "scripts": {
+    "eslint": "eslint --fix --ext .js --ext .jsx --ext .ts --ext .tsx ./src",
+    "lint-staged": "lint-staged",
+    "pub": "npm publish --registry=https://registry.npmjs.org/ && git push",
+    "pub:beta": "npm publish --registry=https://registry.npmjs.org/ --tag beta"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "typescript": "^4.1.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.0.0",
+    "typescript": ">=4.0.0"
+  },
+  "maintainers": [
+    "wang.kangning",
+    "publisher"
+  ]
+}
