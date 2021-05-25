@@ -1,6 +1,6 @@
 # @orca-fe/eslint-config
 
-浩鲸智能eslint代码规范
+orca 前端团队 eslint 代码规范
 
 ## 更新记录
 
@@ -20,5 +20,5 @@ add `.eslintrc.js`
 ```javascript
 module.exports = {
   extends: '@orca-fe/eslint-config',
-}
+};
 ```
