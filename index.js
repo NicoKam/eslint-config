@@ -11,6 +11,9 @@ module.exports = {
     require.resolve('./rules/import.js'),
     require.resolve('./rules/typescript.js'),
   ],
+  rules: {
+    'react/require-default-props': 'off',
+  },
   env: {
     browser: true,
     node: true,

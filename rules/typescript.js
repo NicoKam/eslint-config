@@ -557,7 +557,7 @@ module.exports = {
          * 参考 no-unused-expressions
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-expressions.md
          */
-        '@typescript-eslint/no-unused-expressions': rules['no-unused-expressions'],
+        '@typescript-eslint/no-unused-expressions': 'error',
         'no-unused-expressions': 'off',
 
         /**
