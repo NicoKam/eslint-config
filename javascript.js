@@ -1,19 +1,11 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: { jsx: true },
-    project: './tsconfig.json',
-  },
+  parser: '@babel/eslint-parser',
   extends: [
     require.resolve('./rules/eslint-recommend.js'),
     require.resolve('./rules/react-recommend.js'),
     require.resolve('./rules/hooks-recommend.js'),
     require.resolve('./rules/import.js'),
-    require.resolve('./rules/typescript.js'),
   ],
-  rules: {
-    'react/require-default-props': 'off',
-  },
   env: {
     browser: true,
     node: true,

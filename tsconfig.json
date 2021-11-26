@@ -29,6 +29,7 @@
     "src/**/*",
     "rules/**/*",
     "index.js",
+    "javascript.js",
     ".eslintrc.js",
     "typings.d.ts"
   ],
