@@ -18,7 +18,6 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-
         /**
          * 【严重】重载声明时，必须合并在一起声明，不得分开
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md
@@ -192,7 +191,8 @@ module.exports = {
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md
          */
         '@typescript-eslint/member-delimiter-style': [
-          'error', {
+          'error',
+          {
             multiline: {
               delimiter: 'semi',
               requireLast: true,
@@ -293,7 +293,8 @@ module.exports = {
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
          */
         '@typescript-eslint/no-explicit-any': [
-          'error', {
+          'error',
+          {
             fixToUnknown: true,
             ignoreRestArgs: true,
           },
@@ -524,19 +525,27 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-constraint': 'error',
 
         /**
-         * 【警告】禁止不安全的类型变换
+         * 【关闭】禁止不安全的类型变换
          * 将 any 类型赋值给别的类型，是会造成类型安全问题的
          * 但强制开启本条规则可能会导致上手困难，因此设置为警告级别
+         *
+         * changelog:
+         * v2.0.0 调整级别为关闭，容易识别不准确，导致大量warning
+         *
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md
          */
-        '@typescript-eslint/no-unsafe-assignment': 'warn',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
 
         /**
-         * 【警告】禁止不安全的函数调用
+         * 【关闭】禁止不安全的函数调用
          * 如果调用函数时，不能安全地判断其类型为函数，则很可能在代码中留下隐患
+         *
+         * changelog:
+         * v2.0.0 调整级别为关闭，容易识别不准确，导致大量warning
+         *
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md
          */
-        '@typescript-eslint/no-unsafe-call': 'warn',
+        '@typescript-eslint/no-unsafe-call': 'off',
 
         /**
          * 【警告】禁止不安全的成员访问
@@ -546,12 +555,15 @@ module.exports = {
         '@typescript-eslint/no-unsafe-member-access': 'warn',
 
         /**
-         * 【警告】禁止不安全的返回值
+         * 【关闭】禁止不安全的返回值
          * 禁止返回带有 any 的内容
-         * TODO 这条规则可能过于严格，意图是很好的，需要执行后观察影响
+         *
+         * changelog:
+         * v2.0.0 调整级别为关闭，容易识别不准确，导致大量warning
+         *
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-return.md
          */
-        '@typescript-eslint/no-unsafe-return': 'warn',
+        '@typescript-eslint/no-unsafe-return': 'off',
 
         /**
          * 参考 no-unused-expressions
@@ -731,7 +743,8 @@ module.exports = {
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
          */
         '@typescript-eslint/restrict-template-expressions': [
-          'warn', {
+          'warn',
+          {
             allowNumber: true,
             allowBoolean: true,
             allowAny: true,
