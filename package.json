@@ -8,8 +8,12 @@
   "scripts": {
     "eslint": "eslint --fix --ext .js --ext .jsx --ext .ts --ext .tsx ./src",
     "lint-staged": "lint-staged",
-    "pub": "npm publish --registry=https://registry.npmjs.org/ --access public && git push",
-    "pub:beta": "npm publish --registry=https://registry.npmjs.org/ --access public --tag beta"
+    "pub": "npm publish && git push",
+    "pub:beta": "npm publish --tag beta"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
