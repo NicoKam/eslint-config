@@ -4,6 +4,9 @@ orca 前端团队 eslint 代码规范
 
 ## 更新记录
 
+- v1.1.0
+  - 调整 @typescript-eslint/no-shadow ，移除配置项
+  - 升级了相关依赖
 - v1.0.2
   - 调整 @typescript-eslint/no-unused-expressions 规则级别为 `error` 并移除 `options`
 - v1.0.0

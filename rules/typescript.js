@@ -459,7 +459,7 @@ module.exports = {
          * 参考 no-shadow
          * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
          */
-        '@typescript-eslint/no-shadow': rules['no-shadow'],
+        '@typescript-eslint/no-shadow': 'warn',
         'no-shadow': 'off',
 
         /**
