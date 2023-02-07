@@ -4,6 +4,8 @@ orca 前端团队 eslint 代码规范
 
 ## 更新记录
 
+- v2.3.0
+  - 升级依赖
 - v2.2.0
   - 调整 @typescript-eslint/no-shadow ，移除配置项
   - 升级了相关依赖
