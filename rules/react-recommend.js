@@ -116,6 +116,15 @@
 
 module.exports = {
   extends: ['plugin:react/recommended'],
+  settings: {
+    react: {
+      createClass: 'createReactClass', // Regex for Component Factory to use,
+      // default to "createReactClass"
+      pragma: 'React', // Pragma to use, default to "React"
+      fragment: 'Fragment', // Fragment to use (may be a property of <pragma>), default to "Fragment"
+      version: 'detect', // React version. "detect" automatically picks the version you have installed.
+    },
+  },
   // 以下内容是在react/recommended的基础上，再做出的一些调整
   rules: {
 
