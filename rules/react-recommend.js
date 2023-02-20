@@ -113,7 +113,6 @@
  * 强制类在render函数中要有返回值
  */
 
-
 module.exports = {
   extends: ['plugin:react/recommended'],
   settings: {
@@ -127,7 +126,6 @@ module.exports = {
   },
   // 以下内容是在react/recommended的基础上，再做出的一些调整
   rules: {
-
     /**
      * 【关闭】我们很多情况下，使用函数，都是没有使用display-name的
      */
@@ -336,15 +334,9 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/sort-comp.md
      */
     'react/sort-comp': [
-      'error', {
-        order: [
-          'static-methods',
-          'static-variables',
-          'instance-variables',
-          'lifecycle',
-          'everything-else',
-          'render',
-        ],
+      'error',
+      {
+        order: ['static-methods', 'static-variables', 'instance-variables', 'lifecycle', 'everything-else', 'render'],
         groups: {
           lifecycle: [
             'displayName',
@@ -429,10 +421,7 @@ module.exports = {
      * 【严重】闭合标签的反尖括号必须与起始标签的左尖括号的那一行对齐
      * https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-closing-bracket-location.md
      */
-    'react/jsx-closing-bracket-location': [
-      'error',
-      'tag-aligned',
-    ],
+    'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
 
     /**
      * 【严重】闭合标签的位置必须与起始标签对齐，可单行对齐或跨行对齐
@@ -445,7 +434,8 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-curly-brace-presence.md
      */
     'react/jsx-curly-brace-presence': [
-      'error', {
+      'error',
+      {
         props: 'never',
         children: 'never',
       },
@@ -456,7 +446,8 @@ module.exports = {
      * https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-curly-newline.md
      */
     'react/jsx-curly-newline': [
-      'error', {
+      'error',
+      {
         // JSX表达式在花括号内只占据一行时，不允许在花括号内直接有换行符
         singleline: 'forbid',
       },
@@ -559,14 +550,20 @@ module.exports = {
      * 【严重】禁止使用不必要的fragments片段
      * https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-no-useless-fragment.md
      */
-    'react/jsx-no-useless-fragment': 'error',
+    'react/jsx-no-useless-fragment': [
+      'error',
+      {
+        allowExpressions: true,
+      },
+    ],
 
     /**
      * 【严重】限制一行内JSX表达式的数量
      * https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-one-expression-per-line.md
      */
     'react/jsx-one-expression-per-line': [
-      'error', {
+      'error',
+      {
         allow: 'single-child',
       },
     ],
@@ -631,7 +628,8 @@ module.exports = {
      *  https://github.com/yannickcr/eslint-plugin-react/blob/HEAD/docs/rules/jsx-wrap-multilines.md
      */
     'react/jsx-wrap-multilines': [
-      'error', {
+      'error',
+      {
         // 声明JSX变量
         declaration: 'parens-new-line',
         // 声明了变量后赋值
@@ -648,10 +646,8 @@ module.exports = {
         prop: 'parens-new-line',
       },
     ],
-
   },
 };
-
 
 /**
  * 未添加的规则
