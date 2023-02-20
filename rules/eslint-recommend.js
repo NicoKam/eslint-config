@@ -1218,8 +1218,8 @@ module.exports = {
      */
     'prefer-destructuring': [
       'error', {
-        array: true,
-        object: false,
+        array: false,
+        object: true,
       }, {
         enforceForRenamedProperties: false,
       },

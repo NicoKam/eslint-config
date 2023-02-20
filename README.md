@@ -4,10 +4,11 @@ orca 前端团队 eslint 代码规范
 
 ## 更新记录
 
+- v2.3.2
+  - `prefer-destructuring` 增加选项，不对数组进行强制解构
 - v2.3.1
   - 升级依赖
   - `max-len` 增加选项 `ignoreStrings: true`
-  - `prefer-destructuring` 增加选项，不对数组进行强制解构
 - v2.3.0
   - 升级依赖
 - v2.2.0
