@@ -799,17 +799,19 @@ module.exports = {
     ],
 
     /**
-     * 【严重】单行最大长度(120字符)
+     * 【严重】单行最大长度(160字符)
      * https://eslint.org/docs/rules/max-len
      */
     'max-len': [
-      'error', 120, {
+      'error', 160, {
         // 注释长度
         comments: 200,
         // 忽略超长URL
         ignoreUrls: true,
         // 忽略超长模板字符串
         ignoreTemplateLiterals: true,
+        // 忽略字符串
+        ignoreStrings: true,
       },
     ],
 
@@ -1214,7 +1216,14 @@ module.exports = {
     /**
      * 【严重】在合适的情况下使用解构
      */
-    'prefer-destructuring': ['error'],
+    'prefer-destructuring': [
+      'error', {
+        array: true,
+        object: false,
+      }, {
+        enforceForRenamedProperties: false,
+      },
+    ],
 
     /**
      * 【严重】不使用arguments，使用解构获得剩余参数
