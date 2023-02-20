@@ -1,6 +1,6 @@
 {
   "name": "@orca-fe/eslint-config",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "files": [
     "rules",
     "index.js"
